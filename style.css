@@ -1,0 +1,63 @@
+	::-webkit-input-placeholder {color:#DCDCDC;}
+	::-moz-placeholder          {color:#DCDCDC;}/* Firefox 19+ */
+	:-moz-placeholder           {color:#DCDCDC;}/* Firefox 18- */
+	:-ms-input-placeholder      {color:#DCDCDC;}
+
+body {
+    font-family: Trebuchet MS, sans-serif;
+   }
+
+th {
+    padding: 2px 5px 2px 5px;
+}
+
+table {
+   border: 1px solid #A9A9A9; 
+}
+
+td.number {
+    cursor: pointer;
+}
+
+#container {
+	position:absolute;
+	margin-top:1%;
+	margin-left:32%;
+}
+
+input {
+	margin: 5px;
+    padding: 5px 0px 5px 0px;
+    outline: none;
+    width: 80px;
+    border: 1px solid #A9A9A9;
+    outline: none;
+    font: 16px/1 Trebuchet MS, sans-serif;
+    text-align: center;
+}
+
+button {
+    background-color: #333333; 
+    color: #e6e6e6;    
+    width: 80px;
+    border: none;
+    padding: 5px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+button:hover {
+	background-color: #595959;
+    color: white;
+}
+
+
+button:focus {
+outline: none !important
+}

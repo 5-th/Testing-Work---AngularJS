@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app='myApp'>
+    <head>
+		<meta http-equiv="Content-Type" charset=utf-8">
+		<meta name="description" content="Testing Work for BankofRussia">
+		<meta name="author" content="andrew.fivebro">
+    
+    	<title> Testing work </title>
+
+   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   		<link rel="stylesheet" href="style.css">
+   		<script src = 'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js'> </script>
+   		<script src = "jquery.js"> </script>
+ 	 	<script src = "app.js"></script>
+    </head> 
+    
+   	<body background="images/background-image.jpg"> 
+		<div id="container" ng-controller='MyCtrl'>
+		<!-- поле ввода размерности матрицы -->
+		  <p>Введите размерность матрицы: 
+		    <input type="text" ng-model='n' ng-keydown="$event.keyCode === 13 && setMatrixToDOM()" />
+		    	&times;
+		    <input type="text" ng-model='m' ng-keydown="$event.keyCode === 13 && setMatrixToDOM()" />
+		  </p>
+		<!-- таблица данных -->
+		<div align="center">
+			<table width=100% border="1px">
+			<tr align="center" ng-repeat='tr in matrix'>
+				<td class='number' onclick='myClick(this)' ng-repeat='td in tr track by $index' > {{td}} </td>
+			</tr>
+			</table>
+		</div>
+		</br>
+		<!-- поле ввода вероятности и кнопок управления -->
+		<div align="center" style='width:100%'>
+		  <button style="width:150px; display:inline-block; margin-right:20px" ng-click = 'setMatrixToDOM()'> АВТОЗАПОЛНЕНИЕ </button>
+		  <div style="display:inline-block"> Вероятность: </div>
+		  <input type="text" placeholder="от 0 до 0,99" value='0.5'  ng-model='chance' ng-keydown="$event.keyCode === 13 && setMatrixToDOM()">
+		  <button ng-click='count()' style='width:90px; margin-left:20px'> СЧИТАТЬ </button>				
+ 		</div>
+ 		</br>
+ 		<!-- таблица результатов -->
+ 		<div align="center">
+			<table id='table' width=100% border="1px" style="cursor:pointer"'>
+			<tr align="center">
+				<th> Вероятность </th>
+				<th> Количество доменов в матрице </th>
+				<th> Количество ячеек в матрице (N&times;M) </th>
+			</tr>
+			<tr align="center" ng-repeat='string in resultMatrix'>
+				<td> {{string[0]}} </td>
+				<td> {{string[1]}} </td>
+				<td> {{string[2]}} </td>
+			</tr>
+			</table>
+		</div>
+    </body> 
+</html>
