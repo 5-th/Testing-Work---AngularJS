@@ -1,5 +1,5 @@
 # Testing-Work---AngularJS
-<p align="center"><img width="65%" height="65%" src="screenshot.png" /></p>
+<p align="center"><img src="video.gif" /></p>
 
 ## Задание 
 Рализуйте при помощи JS, JQuery и AngularJS следующее: <br/>
